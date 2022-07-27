@@ -1,0 +1,14 @@
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" >Câu hỏi </h2>
+<div style="margin-left: 25%;">
+    <div class="container mt-sm-5 my-1" *ngFor="let q of lstQuestions; index as i">
+        <div class="question ml-sm-5 pl-sm-5 pt-2" >
+            <div class="py-2 h5" ><b>Câu hỏi {{i+1}}: {{q.Text}}</b></div>
+            <div *ngFor="let an of q.Answers" class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options" > 
+            <label  class="options" for="anw_{{an.Id}}">{{an.Text}}
+                <input  (change)="selectAnswer(q.Id, an.Id)" id="anw_{{an.Id}}" type="radio" [name]="q.Id" [value]="an.Id"  type="radio" name=""> <span class="checkmark"></span>
+            </label> 
+            </div>
+        </div>        
+    </div>
+</div>
+<button style="margin-left:47%;margin-top: 3%;" class="btn btn-success" (click)="submitExcercise()">Nộp bài</button>

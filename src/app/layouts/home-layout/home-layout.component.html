@@ -1,0 +1,61 @@
+
+<body>
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top py-0" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#">Quizz</a>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Bài viết</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Liên Hệ</a></li>
+                        <!-- <li class="nav-item mx-0 mx-lg-1" *ngIf="isLoggedIn()">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" aria-current="page" href="javascript:;">Đăng xuất</a>
+                        </li> -->
+                        <li class="nav-item mx-0 mx-lg-1" >
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" aria-current="page" routerLink="login">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <img class="masthead-avatar mb-5" src="../../../assets/img/avataaars.svg" alt="..." />
+                <h1 class="masthead-heading text-uppercase mb-0">Hệ thống làm quizz số 1 thế giới</h1>
+            </div>
+        </header>
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <router-outlet></router-outlet> 
+            </div>
+        </section>
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Địa chỉ</h4>
+                        <p class="lead mb-0">
+                            Cao đẳng thực hành FPT Polytechnich
+                            <br />
+                            Trịnh Văn Bô, Nam Từ Liêm, Hà Nội
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                    </div>
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Liên hệ</h4>
+                        Liên hệ theo số Hotline hoặc Facebook
+                        <p class="lead mb-0">
+                            Hotline: 0965509035
+                            <br>
+                            <a href="https://www.facebook.com/ducpho311">Facebook</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Website &copy; Lại Đức Phố </small></div>
+        </div>
+</body>
+

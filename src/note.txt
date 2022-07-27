@@ -1,0 +1,11 @@
+pipe => tính năng để giúp format lại 
+có thể tự tạo ra pipe mới để sử dụng trong dự án bằng cách
+ng g pipe tên pipe
+câu lệnh để tạo ra component:
+ng g component tên_ component
+
+khi thực hiện bấm nút xóa ở component con (hero-item)
+=>
+
+ng g s service/tên
+ng g c name --skip-tests

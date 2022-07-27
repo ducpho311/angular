@@ -1,0 +1,27 @@
+<h3 class="text-center font-monospace">UPDATE USER</h3>
+<div class="form">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="">ID</label>
+            <input disabled type="text" [(ngModel)]="Users.id" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input  type="text" [(ngModel)]="Users.name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" [(ngModel)]="Users.email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Ảnh</label>
+            <input type="hidden" (change)="beforeImg($event)">
+            <input type="file" [(ngModel)]="Users.avatar" (change)="changeImage($event)" class="form-control">
+            <img [src]="imageBase64" alt="">
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-success" type="button" (click)="submitdForm(Users)" >Sửa</button>
+        </div>
+    </div>
+
+</div>

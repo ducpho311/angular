@@ -1,0 +1,13 @@
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">QUIZZ</h2>
+<div class="row justify-content-center" style="margin-top: 5%">
+    <div class="col-md-6 col-lg-4 mb-5" *ngFor="let item of subjects" >
+        <div  class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+            <p style="font-size: 20px; text-align: center;">{{item.Name}}</p>
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" [src]="item.Logo" style="width: 400px;height: 210px;" alt=""/>
+        </div>
+        <button type="button" class="btn btn-success" style="margin-left: 42%; margin-top: 2%;" [routerLink]="'/quiz/' + item.Code"> Làm bài </button>
+    </div>   
+</div>

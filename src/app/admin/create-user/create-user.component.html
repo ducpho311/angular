@@ -1,0 +1,26 @@
+<h3 class="text-center font-monospace">CREATE USER</h3>
+<div class="form">
+    <div class="col-6">
+         <div class="form-group">
+            <label for="">ID</label>
+            <input disabled type="text" [(ngModel)]="FormUsers.id" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input  type="text" [(ngModel)]="FormUsers.name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" [(ngModel)]="FormUsers.email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Ảnh</label>
+            <input type="file" [(ngModel)]="FormUsers.avatar" (change)="changeImage($event)" class="form-control">
+            <img [src]="imageBase64" alt="">
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-success" type="button" (click)="submitdForm(FormUsers)">Submit</button>
+        </div>
+    </div>
+
+</div>

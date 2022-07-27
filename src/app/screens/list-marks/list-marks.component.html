@@ -1,0 +1,12 @@
+<div class="ml-2" *ngFor="let item of Diem ">
+    <div *ngFor="let i of item.marks">
+        <div *ngIf="Code == i.subject">
+            <h5 class="mb-0 fs-3" >{{item.name}}</h5> <span></span>
+            <div class="d-flex flex-row">
+                <span class="mr-3">Mã môn: {{i.subject}}</span>
+                
+            </div>
+            <div class="d-flex flex-row fw-bold fs-5">Điểm: <span class="mr-3 fs-5" style="color: red;">{{i.score}}</span>
+        </div>
+    </div>
+</div>
